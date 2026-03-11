@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brylle's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="retro-bg"></div>
+
+    <div class="game-boy-screen">
+        
+        <header class="hud-header">
+            <nav class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+            </nav>
+        </header>
+
+        <div class="scroll-container">
+
+            <section id="home" class="section-container hero-split">
+                <div class="hero-text">
+                    <h1>Greetings!<br>Brylle here.<br><span class="highlight">Programmer & UI/UX Designer</span></h1>
+                    <a href="#about" class="btn-primary">ABOUT ME <i class="fas fa-arrow-right"></i></a>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1C4iKgJ6kn/" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bbrrylle/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/brylle-umipig-49135a29a/" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/bryllemitra" class="social-btn"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="landscape-frame">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="heroCarouselTrack">
+                                <img src="Images/MainPic.webp" alt="Landscape View" loading="lazy" width="800" height="400">
+                                <img src="Images/MainPic1.webp" alt="Landscape View" loading="lazy" width="800" height="400">
+                                <img src="Images/Mainpic2.webp" alt="Landscape View" loading="lazy" width="800" height="400">
+                                <img src="Images/Mainpic4.webp" alt="Landscape View" loading="lazy" width="800" height="400">
+                                <img src="Images/Mainpic5.webp" alt="Landscape View" loading="lazy" width="800" height="400">
+                            </div>
+                            
+                            <button class="carousel-btn prev" onclick="moveCarousel('heroCarouselTrack', -1)">&#10094;</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('heroCarouselTrack', 1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section-container">
+                <div class="section-heading animate-on-scroll"><i class="fas fa-user"></i> ABOUT ME</div>
+                
+                <div class="about-split">
+                    <div class="about-img-frame animate-on-scroll delay-1">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="aboutCarouselTrack">
+                                <img src="Images/image3.webp" alt="Photo 1" loading="lazy" width="350" height="450">
+                                <img src="Images/image2.webp" alt="Photo 2" loading="lazy" width="350" height="450">
+                                <img src="Images/picture3.webp" alt="Photo 3" loading="lazy" width="350" height="450">
+                                <img src="Images/MainPic.webp" alt="Photo 4" loading="lazy" width="350" height="450">
+                                <img src="Images/image5.webp" alt="Photo 5" loading="lazy" width="350" height="450">
+                                <img src="Images/MainPic.webp" alt="Photo 4" loading="lazy" width="350" height="450">
+                                <img src="Images/image6.webp" alt="Photo 5" loading="lazy" width="350" height="450">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('aboutCarouselTrack', -1)">&#10094;</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('aboutCarouselTrack', 1)">&#10095;</button>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details animate-on-scroll delay-2">
+                        <div class="bio-box">
+                            <h3 style="margin-top:0; color:var(--primary);">Just a curious dev :)</h3>
+                            <p>Hi, I am Brylle.
+I am a developer with a curious mind and a strong drive to figure things out—even when the path forward is not always clear. I take pride in understanding how things work, breaking down ideas, and learning by doing.
+
+Whether it is crafting object-oriented systems, debugging tough issues, or designing database relationships, I strive for clarity, structure, and intention in everything I build. I am not just coding to get it done—I am coding to understand.
+
+This portfolio is a quiet reminder that I am still here, still growing, and still trying to do good work.</p>
+                        </div>
+                        
+                        <ul class="info-list">
+                            <li><span class="info-label">Name:</span> Brylle Mitra Umipig</li>
+                            <li><span class="info-label">Birthday:</span> February 8, 2004</li>
+                            <li><span class="info-label">Age:</span> 21</li>
+                            <li><span class="info-label">Email:</span> umipigbrylle@gmail.com</li>
+                        </ul>
+
+                        <button class="btn-primary" style="background: var(--accent); border: 4px solid var(--text); font-family: inherit; cursor: pointer; width: 100%; text-align: center;" onclick="openResume()">
+                            VIEW RESUME <i class="fas fa-file-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section-container">
+                <div class="section-heading animate-on-scroll"><i class="fas fa-tools"></i> SKILLS & INTERESTS</div>
+                <div class="skills-grid">
+                    <div class="skill-card animate-on-scroll delay-1"><i class="fab fa-html5" style="color:orange"></i><span>HTML</span></div>
+                    <div class="skill-card animate-on-scroll delay-2"><i class="fab fa-css3-alt" style="color:lightblue"></i><span>CSS</span></div>
+                    <div class="skill-card animate-on-scroll delay-3"><i class="fab fa-php" style="color:mediumpurple"></i><span>PHP</span></div>
+                    <div class="skill-card animate-on-scroll delay-1"><i class="fab fa-js" style="color:yellow"></i><span>JS</span></div>
+                    <div class="skill-card animate-on-scroll delay-2"><i class="fab fa-python" style="color:#3776AB"></i><span>PYTHON</span></div>
+                    <div class="skill-card animate-on-scroll delay-3"><i class="fas fa-database" style="color:gray"></i><span>SQL</span></div>
+                    <div class="skill-card animate-on-scroll delay-1"><i class="fas fa-mobile-alt" style="color:cyan"></i><span>FLUTTER</span></div>
+                    <div class="skill-card animate-on-scroll delay-2"><i class="fab fa-figma" style="color:#F24E1E"></i><span>FIGMA</span></div>
+                    <div class="skill-card animate-on-scroll delay-3"><i class="fas fa-pen-nib" style="color:#00C4CC"></i><span>CANVA</span></div>
+                    <div class="skill-card animate-on-scroll delay-1"><i class="fas fa-layer-group" style="color:#31A8FF"></i><span>PHOTOSHOP</span></div>
+                </div>
+            </section>
+
+            <section id="education" class="section-container">
+                <div class="section-heading animate-on-scroll"><i class="fas fa-graduation-cap"></i> MY EDUCATION</div>
+                
+                <div class="edu-card animate-on-scroll delay-1">
+                    <div class="edu-img"><img src="Images/wmsu.webp" alt="School" loading="lazy" width="140" height="120"></div>
+                    <div class="edu-info">
+                        <div class="edu-school">Western Mindanao State University</div>
+                        <span class="edu-year">2022 - 2026</span>
+                        <p style="font-size:0.7rem; margin:0;">BS in Information Technology</p>
+                        <p style="font-size:0.7rem; margin:0;">Address: Normal Road, Zamboanga City</p>
+                    </div>
+                </div>
+
+                <div class="edu-card animate-on-scroll delay-2">
+                    <div class="edu-img"><img src="Images/mnhs.webp" alt="School" loading="lazy" width="140" height="120"></div>
+                    <div class="edu-info">
+                        <div class="edu-school">Manicaha National High School</div>
+                        <span class="edu-year">2016 - 2022</span>
+                        <p style="font-size:0.7rem; margin:0;">Secondary Education</p>
+                        <p style="font-size:0.7rem; margin:0;">Address: Manicahan, Zamboanga City</p>
+                    </div>
+                </div>
+
+                <div class="edu-card animate-on-scroll delay-3">
+                    <div class="edu-img"><img src="Images/ves.webp" alt="School" loading="lazy" width="140" height="120"></div>
+                    <div class="edu-info">
+                        <div class="edu-school">Victoria Elementary School</div>
+                        <span class="edu-year">2010 - 2016</span>
+                        <p style="font-size:0.7rem; margin:0;">Elementary Education</p>
+                        <p style="font-size:0.7rem; margin:0;">Address: MCLL Highway, Victoria, Zamboanga City</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section-container">
+                <div class="section-heading animate-on-scroll"><i class="fas fa-briefcase"></i> PROJECTS & STUFF</div>
+                <div style="text-align: center; font-size: 0.6rem; margin-bottom: 20px; color: #555;" class="animate-on-scroll">(CLICK CARD TO VIEW DETAILS)</div>
+                
+                <div class="project-grid">
+
+                    <div class="project-card animate-on-scroll delay-1" onclick="openProjectModal('PESO Job Portal', 'A job seeking platform designed for the Software Engineering subject.', ['Images/peso1.webp', 'Images/peso2.webp', 'Images/peso3.webp'])">
+                        <div class="project-thumb"><img src="Images/peso1.webp" alt="P1" loading="lazy" width="280" height="180"></div>
+                        <div class="project-meta">
+                            <div class="project-title">PESO Job Portal</div>
+                            <div style="font-size: 0.6rem; color: #666;">Job seeking platform for Software Engineering subject.</div>
+                            <div class="tag-row"><span style="background:#eee; padding:3px; font-size:0.5rem; border:1px solid black;">PHP</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card animate-on-scroll delay-2" onclick="openProjectModal('HealthTingi', 'A comprehensive Flutter application featuring Ingredient Scanning, Meal Budget Planning, and Meal Recommendation.', ['Images/h1.webp', 'Images/h2.webp', 'Images/h3.webp','Images/healthtingi1.webp', 'Images/healthtingi2.webp', 'Images/healthtingi3.webp'])">
+                        <div class="project-thumb"><img src="Images/healthtingi1.webp" alt="P2" loading="lazy" width="280" height="180"></div>
+                        <div class="project-meta">
+                            <div class="project-title">HealthTingi</div>
+                            <div style="font-size: 0.6rem; color: #666;">Flutter app with Ingredient Scanning, Meal Budget Planning, and Meal Recommendation.</div>
+                            <div class="tag-row"><span style="background:#eee; padding:3px; font-size:0.5rem; border:1px solid black;">DART</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card animate-on-scroll delay-3" onclick="openProjectModal('TaskSync', 'A Flutter application featuring To-Do List, Calendar/Reminder, and Review Countdown Timer.', ['Images/task1.webp', 'Images/task2.webp', 'Images/task3.webp'])">
+                        <div class="project-thumb"><img src="Images/task4.webp" alt="P2" loading="lazy" width="280" height="180"></div>
+                        <div class="project-meta">
+                            <div class="project-title">TaskSync</div>
+                            <div style="font-size: 0.6rem; color: #666;">Flutter app with To-Do List, Calendar/Reminder, and Review Countdown Timer.</div>
+                            <div class="tag-row"><span style="background:#eee; padding:3px; font-size:0.5rem; border:1px solid black;">DART</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card animate-on-scroll delay-1" onclick="openProjectModal('Foodtrack Company Branding (Photoshop Activity)', 
+                    'Creating the company\'s letterhead showcasing the professionalism of the company.', 
+                    ['Images/foodtrack1.webp', 'Images/foodtrack24.png', 'Images/foodtrack4.webp', ])">
+                        <div class="project-thumb"><img src="Images/foodtrack1.2.png" alt="P2" loading="lazy" width="280" height="180"></div>
+                        <div class="project-meta">
+                            <div class="project-title">Foodtrack Company Branding (Photoshop Activity)</div>
+                            <div style="font-size: 0.6rem; color: #666;">Creating what does the company aims for, and defining them as what they intended.</div>
+                            <div class="tag-row"><span style="background:#eee; padding:3px; font-size:0.5rem; border:1px solid black;">VISUAL BRANDING</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="game-footer">
+                <div class="footer-col animate-on-scroll delay-1">
+                    <h4>Brylle's Portfolio</h4>
+                    <p>© 2026 Brylle Umipig. All rights reserved.</p>
+                </div>
+                <div class="footer-col animate-on-scroll delay-2">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +63 927-515-1612 or +63 992-274-1476</p>
+                    <p><i class="fas fa-envelope"></i> umipigbrylle@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Zamboanga City</p>
+                </div>
+                <div class="footer-col animate-on-scroll delay-3">
+                    <h4>Daily Inspiration</h4>
+                    <p style="font-style: italic;">"However vast the darkness, we must supply our own light."</p>
+                    <p>- Stanley Kubrick</p>
+                </div>
+            </footer>
+
+        </div> 
+    </div>
+
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closeProjectModal()">X</button>
+            <h2 id="modalTitle" style="text-align: center; color: var(--primary);">Project Title</h2>
+            <div class="modal-carousel-frame">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="modalCarouselTrack"></div>
+                    <button class="carousel-btn prev" onclick="moveCarousel('modalCarouselTrack', -1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveCarousel('modalCarouselTrack', 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="modal-text">
+                <p id="modalDesc">Project Description goes here...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="resumeModal" class="modal-overlay">
+        <div class="modal-content" style="text-align: center;">
+            <button class="modal-close-btn" onclick="closeResume()">X</button>
+            <h2 style="color: var(--primary); margin-top: 0; font-size: 1rem;">GET IN TOUCH</h2>
+            <img src="Images/brylleCV.png" alt="Brylle CV" class="resume-img" loading="lazy">
+            <div style="margin-top: 20px;">
+                <a href="Images/brylleCV.png" download="Brylle_CV" class="btn-primary" style="background: var(--accent); color: white;">SAVE AS PNG</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body> 
+</html>
