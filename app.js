@@ -58,7 +58,9 @@ class PortfolioController {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); 
+                } else {
+                    // 2. When it scrolls OUT of view, remove the class so it resets
+                    entry.target.classList.remove('is-visible');
                 }
             });
         }, { 
